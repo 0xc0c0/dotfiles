@@ -20,7 +20,7 @@
                     "border": "normal",
                     "floating": "auto_off",
                     "layout": "stacked",
-                    "percent": 0.618,
+                    "percent": 0.5,
                     "type": "con",
                     "nodes": [
                         {
@@ -55,7 +55,7 @@
                     "border": "normal",
                     "floating": "auto_off",
                     "layout": "stacked",
-                    "percent": 0.382,
+                    "percent": 0.5,
                     "type": "con",
                     "nodes": [
                         {
