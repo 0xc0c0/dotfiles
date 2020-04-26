@@ -79,7 +79,8 @@
                             "percent": 0.5,
                             "swallows": [
                                {
-                               "class": "^Firefox-esr$"
+                                   "class": "^Firefox-esr$"
+                                   "class": "^Firefox$"
                                }
                             ],
                             "type": "con"
