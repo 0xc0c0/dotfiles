@@ -75,12 +75,13 @@
                             "border": "none",
                             "current_border_width": 3,
                             "floating": "auto_off",
-                            "name": "Firefox",
+                            "name": "Browser",
                             "percent": 0.5,
                             "swallows": [
                                {
-                                   "class": "^Firefox-esr$",
-                                   "class": "^Firefox$"
+                               //"class": "^Firefox-esr$",
+                               //"class": "^Firefox$",
+                               "window_role": "browser"
                                }
                             ],
                             "type": "con"
