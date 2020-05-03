@@ -39,3 +39,7 @@ set foldenable          " don't fold files by default on open
 nnoremap <space> za
 set foldlevelstart=10   " start with fold level of 1
 " }}}
+
+" YAML {{{
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable
+" }}}
