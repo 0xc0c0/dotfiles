@@ -1,4 +1,7 @@
 alias au='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade -y && sudo apt-get autoremove -y'
 alias update_gpg='gpg-connect-agent updatestartuptty /bye >/dev/null'
 alias dotfiles="$(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias reset="reset && SHTMP=$(ps -p $$ | tail -n1 | awk '{print $4}'); [ -f ~/.${SHTMP}rc ] && source ~/.${SHTMP}rc"
+get_shell() {
+    ps -p $$ | tail -n1 | awk '{print $4}'
+}
+alias reset="reset && [ -f ~/.$(get_shell)rc ] && source ~/.$(get_shell)rc"
