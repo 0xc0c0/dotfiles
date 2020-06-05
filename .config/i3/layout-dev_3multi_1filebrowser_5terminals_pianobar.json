@@ -1,6 +1,7 @@
 // vim:ts=4:sw=4:et
 {
-    // splitv split container with 2 children
+    //this seems like an extra vertical split layer, but is an effective workaround to prevent
+    //  layout glitches during VM resizing
     "border": "normal",
     "floating": "auto_off",
     "layout": "splitv",
@@ -8,148 +9,158 @@
     "type": "con",
     "nodes": [
         {
-            // splith split container with 2 children
+            // splitv split container with 2 children
             "border": "normal",
             "floating": "auto_off",
-            "layout": "splith",
-            "percent": 0.5,
+            "layout": "splitv",
+            "percent": 1,
             "type": "con",
             "nodes": [
                 {
-                    // stacked split container with 2 children
+                    // splith split container with 2 children
                     "border": "normal",
                     "floating": "auto_off",
-                    "layout": "stacked",
+                    "layout": "splith",
                     "percent": 0.5,
                     "type": "con",
                     "nodes": [
                         {
+                            // stacked split container with 2 children
                             "border": "normal",
-                            "current_border_width": 3,
                             "floating": "auto_off",
-                            "name": "pianobar",
+                            "layout": "stacked",
                             "percent": 0.5,
-                            "swallows": [
-                               {
-                                   "window_role": "pianobar"
-                               }
-                            ],
-                            "type": "con"
+                            "type": "con",
+                            "nodes": [
+                                {
+                                    "border": "normal",
+                                    "current_border_width": 3,
+                                    "floating": "auto_off",
+                                    "name": "pianobar",
+                                    "percent": 0.5,
+                                    "swallows": [
+                                       {
+                                           "window_role": "pianobar"
+                                       }
+                                    ],
+                                    "type": "con"
+                                },
+                                {
+                                    "border": "normal",
+                                    "current_border_width": 3,
+                                    "floating": "auto_off",
+                                    "name": "terminal1",
+                                    "percent": 0.5,
+                                    "swallows": [
+                                       {
+                                       "window_role": "terminal1"
+                                       }
+                                    ],
+                                    "type": "con"
+                                }
+                            ]
                         },
                         {
                             "border": "normal",
-                            "current_border_width": 3,
                             "floating": "auto_off",
-                            "name": "terminal1",
+                            "layout": "stacked",
                             "percent": 0.5,
-                            "swallows": [
-                               {
-                               "window_role": "terminal1"
-                               }
+                            "type": "con",
+                            "nodes": [
+                                {
+                                    "border": "none",
+                                    "current_border_width": 3,
+                                    "floating": "auto_off",
+                                    "name": "Nautilus Home",
+                                    "percent": 0.5,
+                                    "swallows": [
+                                       {
+                                       "class": "Nautilus$"
+                                       }
+                                    ],
+                                    "type": "con"
+                                },
+                                {
+                                    "border": "none",
+                                    "current_border_width": 3,
+                                    "floating": "auto_off",
+                                    "name": "Browser",
+                                    "percent": 0.5,
+                                    "swallows": [
+                                       {
+                                       //"class": "^Firefox-esr$",
+                                       //"class": "^Firefox$",
+                                       "window_role": "browser"
+                                       }
+                                    ],
+                                    "type": "con"
+                                }
                             ],
                             "type": "con"
                         }
                     ]
                 },
                 {
+                    // tabbed split container with 4 children
                     "border": "normal",
                     "floating": "auto_off",
-                    "layout": "stacked",
+                    "layout": "tabbed",
                     "percent": 0.5,
                     "type": "con",
                     "nodes": [
                         {
-                            "border": "none",
-                            "current_border_width": 3,
+                            "border": "normal",
+                            "current_border_width": 2,
                             "floating": "auto_off",
-                            "name": "Nautilus Home",
-                            "percent": 0.5,
+                            "name": "terminal 2",
+                            "percent": 0.25,
                             "swallows": [
                                {
-                               "class": "Nautilus$"
+                                   "window_role": "terminal2"
                                }
                             ],
                             "type": "con"
                         },
                         {
-                            "border": "none",
+                            "border": "normal",
                             "current_border_width": 3,
                             "floating": "auto_off",
-                            "name": "Browser",
-                            "percent": 0.5,
+                            "name": "terminal 3",
+                            "percent": 0.25,
                             "swallows": [
                                {
-                               //"class": "^Firefox-esr$",
-                               //"class": "^Firefox$",
-                               "window_role": "browser"
+                                   "window_role": "terminal3"
+                               }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "normal",
+                            "current_border_width": 2,
+                            "floating": "auto_off",
+                            "name": "terminal 4",
+                            "percent": 0.25,
+                            "swallows": [
+                               {
+                                   "window_role": "terminal4"
+                               }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "normal",
+                            "current_border_width": 3,
+                            "floating": "auto_off",
+                            "name": "terminal 5",
+                            "percent": 0.25,
+                            "swallows": [
+                               {
+                                   "window_role": "terminal5"
                                }
                             ],
                             "type": "con"
                         }
-                    ],
-                    "type": "con"
-                }
-            ]
-        },
-        {
-            // tabbed split container with 4 children
-            "border": "normal",
-            "floating": "auto_off",
-            "layout": "tabbed",
-            "percent": 0.5,
-            "type": "con",
-            "nodes": [
-                {
-                    "border": "normal",
-                    "current_border_width": 2,
-                    "floating": "auto_off",
-                    "name": "terminal 2",
-                    "percent": 0.25,
-                    "swallows": [
-                       {
-                           "window_role": "terminal2"
-                       }
-                    ],
-                    "type": "con"
-                },
-                {
-                    "border": "normal",
-                    "current_border_width": 3,
-                    "floating": "auto_off",
-                    "name": "terminal 3",
-                    "percent": 0.25,
-                    "swallows": [
-                       {
-                           "window_role": "terminal3"
-                       }
-                    ],
-                    "type": "con"
-                },
-                {
-                    "border": "normal",
-                    "current_border_width": 2,
-                    "floating": "auto_off",
-                    "name": "terminal 4",
-                    "percent": 0.25,
-                    "swallows": [
-                       {
-                           "window_role": "terminal4"
-                       }
-                    ],
-                    "type": "con"
-                },
-                {
-                    "border": "normal",
-                    "current_border_width": 3,
-                    "floating": "auto_off",
-                    "name": "terminal 5",
-                    "percent": 0.25,
-                    "swallows": [
-                       {
-                           "window_role": "terminal5"
-                       }
-                    ],
-                    "type": "con"
+                    ]
                 }
             ]
         }
