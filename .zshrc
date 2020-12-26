@@ -110,6 +110,10 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+if [ -f ~/.aliases_priv ]; then
+    source ~/.aliases_priv
+fi
+
 if [[ -d ~/.gnupg ]]; then
     export GPG_TTY="$(tty)"
     #export SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
