@@ -131,8 +131,7 @@ if [[ -d ~/.gnupg ]]; then
 fi
 
 if [[ $(command -v figlet) ]] && [[ $(command -v lolcat) ]]; then
-    figlet -c -t "$(whoami)" -f slant | lolcat
-    figlet -c -k -t "$(hostname)" -f small | lolcat
+    figlet -c -t "$(whoami) @ $(hostname)" -f smslant | lolcat
 fi
 
 if [[ $(command -v yarn) ]]; then
