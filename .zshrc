@@ -124,6 +124,11 @@ fi
 if [[ $(command -v figlet) ]] && [[ $(command -v lolcat) ]]; then
     figlet -c -t "$(whoami) @ $(hostname)" -f smslant | lolcat
 fi
+
 if [[ $(command -v yarn) ]]; then
     export PATH="$PATH:$(yarn global bin)"
+fi
+
+if [[ $(command -v virsh) ]]; then
+    export LIBVIRT_DEFAULT_URI="qemu:///system"
 fi
