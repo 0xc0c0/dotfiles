@@ -6,6 +6,6 @@ git clone --separate-git-dir=$HOME/.dotfiles https://github.com/0xc0c0/dotfiles.
 [[ -z $(which rsync) ]] && sudo apt-get install rsync -y
 rsync --recursive --verbose --exclude '.git' $TMP/ $HOME/
 rm -r $TMP
-dotfiles config --local status.showUntrackedFiles no
+dotfiles config --add status.showUntrackedFiles no
 dotfiles ls-tree -r master --name-only $HOME
 dotfiles status
