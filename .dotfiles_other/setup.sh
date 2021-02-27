@@ -11,7 +11,7 @@ git clone --separate-git-dir=${HOME}/.dotfiles --recurse-submodules https://gith
 [[ -z $(which rsync) ]] && sudo apt-get install rsync -y
 rsync --recursive --verbose --exclude '.git' ${TMP}/ ${HOME}/
 rm -r ${TMP}
-source ${HOME}/.aliases
+. .aliases
 dotfiles config --add status.showUntrackedFiles no
 dotfiles ls-tree -r master --name-only ${HOME}
 dotfiles status
