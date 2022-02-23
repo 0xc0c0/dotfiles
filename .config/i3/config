@@ -199,9 +199,9 @@ exec --no-startup-id vmware-user
 exec --no-startup-id "i3-msg 'workspace $w1; append_layout ~/.config/i3/layout-dev_3multi_1filebrowser_5terminals_pianobar.json'"
 exec gnome-terminal --role=pianobar -x zsh -c "command -v pianobar && PULSE_LATENCY_MSEC=60 pianobar || exit"
 exec --no-startup-id firefox
-exec gnome-terminal --role=terminal1
-exec gnome-terminal --role=terminal2
-exec gnome-terminal --role=terminal3
-exec gnome-terminal --role=terminal4
-exec gnome-terminal --role=terminal5
+exec gnome-terminal --role=terminal1  --title=admin1
+exec gnome-terminal --role=terminal2  --title=admin2
+exec gnome-terminal --role=terminal3  --title=admin3
+exec gnome-terminal --role=terminal4  --title=admin4
+exec gnome-terminal --role=terminal5  --title=admin5
 exec nautilus

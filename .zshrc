@@ -43,7 +43,7 @@ export XCURSOR_PATH=$RUNTIME/usr/share/icons
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -132,3 +132,5 @@ fi
 if [[ $(command -v virsh) ]]; then
     export LIBVIRT_DEFAULT_URI="qemu:///system"
 fi
+
+set_title() { echo -en "\e]2;$*\a"}
