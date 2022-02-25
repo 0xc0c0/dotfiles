@@ -197,7 +197,7 @@ exec --no-startup-id vmware-user
 
 # Open the admin quad layout in $w1, using nautilus file browser
 exec --no-startup-id "i3-msg 'workspace $w1; append_layout ~/.config/i3/layout-dev_3multi_1filebrowser_5terminals_pianobar.json'"
-exec gnome-terminal --role=pianobar -x zsh -c "[[ command -v pianobar ]] && pianobar || exit"
+exec gnome-terminal --role=pianobar -x zsh -c "command -v pianobar && PULSE_LATENCY_MSEC=60 pianobar || exit"
 exec --no-startup-id firefox
 exec gnome-terminal --role=terminal1
 exec gnome-terminal --role=terminal2
