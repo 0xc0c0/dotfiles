@@ -43,28 +43,6 @@
     "type": "con",
     "nodes": [
         {
-            "border": "none",
-            "current_border_width": 3,
-            "floating": "auto_off",
-            "geometry": {
-               "height": 612,
-               "width": 1279,
-               "x": 1279,
-               "y": 52
-            },
-            "marks": [],
-            "name": "Mozilla Firefox goes here...",
-            "percent": 0.333333333333333,
-            "swallows": [
-               {
-               "class": "^Firefox\\-esr$",
-               "instance": "^Navigator$",
-               "window_role": "^browser$"
-               }
-            ],
-            "type": "con"
-        },
-        {
             "border": "normal",
             "current_border_width": 3,
             "floating": "auto_off",
