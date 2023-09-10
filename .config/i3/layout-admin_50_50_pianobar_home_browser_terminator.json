@@ -1,0 +1,111 @@
+// vim:ts=4:sw=4:et
+{
+    // stacked split container with 1 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "stacked",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 638,
+               "width": 2558,
+               "x": 0,
+               "y": 690
+            },
+            "marks": [],
+            "name": "admin",
+            "percent": 1,
+            "swallows": [
+               {
+               "instance": "^x\\-terminal\\-emulator$",
+               "title": "^admin$",
+               "window_role": "^terminal1$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // splith split container with 1 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 612,
+               "width": 1279,
+               "x": 1279,
+               "y": 52
+            },
+            "marks": [],
+            "name": "Mozilla Firefox goes here...",
+            "percent": 0.333333333333333,
+            "swallows": [
+               {
+               "class": "^Firefox\\-esr$",
+               "instance": "^Navigator$",
+               "window_role": "^browser$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 612,
+               "width": 1279,
+               "x": 0,
+               "y": 52
+            },
+            "marks": [],
+            "name": "pianobar",
+            "percent": 0.333333333333333,
+            "swallows": [
+               {
+               "instance": "^x\\-terminal\\-emulator$",
+               "title": "^pianobar$",
+               "window_role": "^pianobar$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "none",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 612,
+               "width": 1279,
+               "x": 1279,
+               "y": 52
+            },
+            "marks": [],
+            "name": "Home",
+            "percent": 0.333333333333333,
+            "swallows": [
+               {
+               "instance": "^baobab$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

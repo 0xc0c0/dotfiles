@@ -194,15 +194,15 @@ for_window [class="discord"] move container to workspace $w4
 #in case this is a VMware WS VM
 exec --no-startup-id vmware-user
 
-set $ws_config_file layout-admin_50_50_pianobar_home_browser.json
+set $ws_config_file layout-admin_50_50_pianobar_home_browser_terminator.json
 #set $ws_config_file layout-dev_3multi_1filebrowser_5terminals_pianobar.json
 # Open the admin quad layout in $w1, using nautilus file browser
 exec --no-startup-id "i3-msg 'workspace $w1; append_layout ~/.config/i3/$ws_config_file'"
-exec gnome-terminal --role=pianobar --title=pianobar -x zsh -c "command -v pianobar && PULSE_LATENCY_MSEC=60 pianobar || exit"
+exec x-terminal-emulator --role=pianobar --title=pianobar -x zsh -c "command -v pianobar && PULSE_LATENCY_MSEC=60 pianobar || exit"
 exec --no-startup-id firefox
-exec gnome-terminal --role=terminal1  --title=admin
+exec x-terminal-emulator --role=terminal1  --title=admin
 #exec gnome-terminal --role=terminal2  --title=admin2
 #exec gnome-terminal --role=terminal3  --title=admin3
 #exec gnome-terminal --role=terminal4  --title=admin4
 #exec gnome-terminal --role=terminal5  --title=admin5
-exec nautilus
+exec baobab ~/
