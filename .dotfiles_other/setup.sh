@@ -8,7 +8,7 @@ if [[ -e ${HOME}/.dotfiles ]];then
     mv ${HOME}/.dotfiles ${HOME}/.dotfiles.old
 fi
 git clone --separate-git-dir=${HOME}/.dotfiles --recurse-submodules https://github.com/0xc0c0/dotfiles.git ${TMP}
-[[ -z $(which rsync) ]] && sudo apt-get install rsync -y
+[[ -z $(which rsync) ]] && sudo apt-get install -y rsync terminator
 rsync --recursive --verbose --exclude '.git' ${TMP}/ ${HOME}/
 rm -r ${TMP}
 shopt -s expand_aliases
