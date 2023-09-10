@@ -13,10 +13,10 @@ set $mod Mod4
 set $mod_alt Mod1
 
 set $w1 1 general
-set $w2 2 notes
+set $w2 2 browser
 set $w3 3 code
-set $w4 4 chat
-set $w5 5 browser
+set $w4 4 test
+set $w5 5 
 set $w6 6 
 set $w7 7 
 set $w8 8 
@@ -183,7 +183,7 @@ for_window [class="Code"] move container to workspace $w3
 for_window [class="Mattermost"] move container to workspace $w4
 for_window [class="Slack"] move container to workspace $w4
 for_window [class="discord"] move container to workspace $w4
-#for_window [class="Firefox"] move container to workspace $w5
+for_window [class="Firefox"] move container to workspace $w2
 
 # Auto open programs
 #exec --no-startup-id code
