@@ -184,6 +184,7 @@ for_window [class="Mattermost"] move container to workspace $w4
 for_window [class="Slack"] move container to workspace $w4
 for_window [class="discord"] move container to workspace $w4
 for_window [class="Firefox"] move container to workspace $w2
+for_window [class="Firefox-esr"] move container to workspace $w2
 
 # Auto open programs
 #exec --no-startup-id code
@@ -205,4 +206,5 @@ exec x-terminal-emulator --role=terminal1  --title=admin
 #exec gnome-terminal --role=terminal3  --title=admin3
 #exec gnome-terminal --role=terminal4  --title=admin4
 #exec gnome-terminal --role=terminal5  --title=admin5
-exec baobab ~/
+exec --no-startup-id command -v baobab && baobab ~/
+exec --no-startup-id command -v nautilus && nautilus || command -v thunar && thunar
