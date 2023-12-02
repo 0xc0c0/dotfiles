@@ -130,6 +130,10 @@ bindsym $mod+Shift+8 move container to workspace $w8
 bindsym $mod+Shift+9 move container to workspace $w9
 bindsym $mod+Shift+0 move container to workspace $w10
 
+# move workspace to output
+bindsym $mod+Shift+greater move workspace to output right
+bindsym $mod+Shift+less move workspace to output left
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -206,5 +210,5 @@ exec x-terminal-emulator --role=terminal1  --title=admin
 #exec gnome-terminal --role=terminal3  --title=admin3
 #exec gnome-terminal --role=terminal4  --title=admin4
 #exec gnome-terminal --role=terminal5  --title=admin5
-exec --no-startup-id command -v baobab && baobab ~/
 exec --no-startup-id command -v nautilus && nautilus || command -v thunar && thunar
+exec x-terminal-emulator --role=update --title="auto update" -x zsh -c "command -v au && au || exit"
