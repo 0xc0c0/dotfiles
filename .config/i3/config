@@ -210,5 +210,5 @@ exec x-terminal-emulator --role=terminal1  --title=admin
 #exec gnome-terminal --role=terminal3  --title=admin3
 #exec gnome-terminal --role=terminal4  --title=admin4
 #exec gnome-terminal --role=terminal5  --title=admin5
-exec --no-startup-id command -v nautilus && nautilus || command -v thunar && thunar
+exec --no-startup-id (command -v nautilus && nautilus &) || (command -v thunar && thunar &)
 exec x-terminal-emulator --role=update --title="auto update" -x zsh -c "command -v au && au || exit"
