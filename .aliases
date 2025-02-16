@@ -5,3 +5,4 @@ get_shell() {
     ps -p $$ | tail -n1 | awk '{print $4}'
 }
 alias reset="reset && [ -f ~/.$(get_shell)rc ] && source ~/.$(get_shell)rc"
+alias i3tf="i3-msg title_format"
